@@ -744,234 +744,128 @@ Defines the display element from the selected report the page block will use whe
 
 |===
 
-[#page-block-geometry]
-== Geometry
+[#page-block-tabs]
+== Tabs
 
-The *geometry page block* allows you to show a map with markers, lines and polygons from different geometry values of different record sources.
+The *tabs page block* allows you to group different page blocks together and display them as tabs.
+Sometimes a page might contain different blocks and simply laying them out side by side might not be the best way to display them.
+Tabs allow you to have the information you need without cluttering the page, making it easier to navigate a page and being more productive.
 
-image:compose-configuration/page-block-reference/config-geometry.png[...,49%,role="preview data-zoomable"]
-image:compose-configuration/page-block-reference/added-geometry.png[...,49%,role="preview data-zoomable"]
+=== Configuring Tabs
+You can add a *tabs page block* to a page by clicking on the *Add* button and selecting *Tabs* from the list of available page blocks.
+In the *tabs* tab, you can configure the tabs page block in other to add the desired page blocks to it or refine the appearance of the tabs page block itself.
 
-.Additional configurations:
-[cols="2s,5a"]
-|===
-| [#page-block-zoom-min]#<<page-block-zoom-min,Zoom min>>#
-|
-Defines the minimum zoom level of the map.
+To add a page block to the tabs page block, click on the *+ Add* button and select the desired page block from the list of available page blocks.
 
-| [#page-block-zoom-max]#<<page-block-zoom-max,Zoom max>>#
-|
-Defines the maximum zoom level of the map.
-
-| [#page-block-zoom-lockbounds]#<<page-block-zoom-lockbounds,Lock bounds>>#
-|
-Defines if the map should be prevented from being panned out or zoomed out of the current rectangular area of the map, specified by its longitude and latitude coordinates. This means that the map will only display the area within the bounds of the specified coordinates and prevent the user from panning or zooming out beyond those bounds.
-
-|===
-
-[#page-block-navigation]
-== Navigation
-
-The *navigation page block* allows you to define custom navigation inside your {PRODUCT_NAME} {APP_NAME_COMPOSE} applications applications. The navigation can be an addition to the pre-defined one or a complete replacement.
-
-image:compose-configuration/page-block-reference/config-navigation.png[...,49%,role="preview data-zoomable"]
-image:compose-configuration/page-block-reference/added-navigation.png[...,49%,role="preview data-zoomable"]
-
-.Additional configurations:
-[cols="2s,5a"]
-|===
-| [#page-block-navigation-appearance]#<<page-block-navigation-appearance,Appearance>>#
-|
-Defines the style of the navigation
-
-.Supported appearances:
-* Tabs +
-
+.Tabs page block configuration:
 [annotation,role="data-zoomable"]
 ----
 {
   "image": {
-    "rel": "compose-configuration/page-block-reference/added-navigation-tabs.png",
-    "alias": "compose-configuration-page-block-reference-added-navigation-tabs",
+    "rel": "compose-configuration/config-tabs2.png",
+    "alias": "config-tabs-add-button-block-selector",
     "w": 1920,
     "h": 1080
   },
-  "view": {
-    "x": 321,
-    "y": 0,
-    "h": 400,
-    "w": 1599
+  "view": {},
+  "focus": {
+    "x": 410,
+    "y": 50,
+    "w": 1100,
+    "h": 865
   },
-  "annotations": []
+  "annotations": [
+    {
+      "x": 410,
+      "y": 611,
+      "w": 75,
+      "h": 30,
+      "text": "Tabs page block configurator"
+    },
+    {
+      "x": 938,
+      "y": 415,
+      "w": 490,
+      "h": 40
+    }
+  ]
 }
 ----
 
-* Pill +
+You can add a new block to your page for it to be instantly tabbed by using the *+* button next to the dropdown for selecting page blocks.
+// annotate here
 
+.Tabs page block configuration:
 [annotation,role="data-zoomable"]
 ----
 {
   "image": {
-    "rel": "compose-configuration/page-block-reference/added-navigation-pills.png",
-    "alias": "compose-configuration-page-block-reference-added-navigation-pills",
+    "rel": "compose-configuration/config-tabs2.png",
+    "alias": "config-tabs-add-block-button",
     "w": 1920,
     "h": 1080
   },
-  "view": {
-    "x": 321,
-    "y": 0,
-    "h": 400,
-    "w": 1599
+  "view": {},
+  "focus": {
+    "x": 410,
+    "y": 50,
+    "w": 1100,
+    "h": 865
   },
-  "annotations": []
+  "annotations": [
+    {
+      "x": 1386,
+      "y": 555,
+      "w": 38,
+      "h": 37
+    }
+  ]
 }
 ----
 
-* Small +
+Tabbing a block removes it from the main page and adds it to the tabs page block.
+You can override this behavior by going to the general tab of that page block and disabling the 'hidden' option for the block.
+This removes it from wherever it is tabbed and returns it to being displayed on the main page.
+// annotate here
 
+A tabbed block is removed from the main page, but you can access its configuration via the *edit* button corresponding to it in the tabs page block's configurator.
+
+.Tabs page block configuration:
 [annotation,role="data-zoomable"]
 ----
 {
   "image": {
-    "rel": "compose-configuration/page-block-reference/added-navigation-small.png",
-    "alias": "compose-configuration-page-block-reference-added-navigation-small",
+    "rel": "compose-configuration/config-tabs2.png",
+    "alias": "config-tabs-edit-block-button",
     "w": 1920,
     "h": 1080
   },
-  "view": {
-    "x": 321,
-    "y": 0,
-    "h": 400,
-    "w": 1599
+  "view": {},
+  "focus": {
+    "x": 410,
+    "y": 50,
+    "w": 1100,
+    "h": 865
   },
-  "annotations": []
+  "annotations": [
+    {
+      "x": 1386,
+      "y": 510,
+      "w": 38,
+      "h": 37
+    }
+  ]
 }
 ----
 
-| [#page-block-navigation-justify]#<<page-block-navigation-justify,Justify>>#
-|
-Sets equal width for all elements on the navigation
+Before selecting a page block to be tabbed, you will find an input box, this controls what is going to be displayed as the title of the tab. 
+If not set, the title of the page block is used, and if that is unset, a generic name is used which is based on the *kind* of the block.
+// annotate here
 
-.Options:
-* Justify +
+[NOTE]
+====
+When you delete a tab block that holds other page blocks, how many times those blocks occur in other tabs block will be determined and they will be added to the main page or not based on the result of that computation.
+====
 
-[annotation,role="data-zoomable"]
-----
-{
-  "image": {
-    "rel": "compose-configuration/page-block-reference/added-navigation.png",
-    "alias": "compose-configuration-page-block-reference-added-navigation.png",
-    "w": 1920,
-    "h": 1080
-  },
-  "view": {
-    "x": 321,
-    "y": 0,
-    "h": 400,
-    "w": 1599
-  },
-  "annotations": []
-}
-----
-
-* None +
-
-[annotation,role="data-zoomable"]
-----
-{
-  "image": {
-    "rel": "compose-configuration/page-block-reference/added-navigation-justify-none.png",
-    "alias": "compose-configuration-page-block-reference-added-navigation-justify-none",
-    "w": 1920,
-    "h": 1080
-  },
-  "view": {
-    "x": 321,
-    "y": 0,
-    "h": 400,
-    "w": 1599
-  },
-  "annotations": []
-}
-----
-
-
-| [#page-block-navigation-alignment]#<<page-block-navigation-alignment,Alignment>>#
-|
-Defines the text alignment of each navigation item
-
-.Supported alignments:
-* Left +
-
-[annotation,role="data-zoomable"]
-----
-{
-  "image": {
-    "rel": "compose-configuration/page-block-reference/added-navigation-left.png",
-    "alias": "compose-configuration-page-block-reference-added-navigation-left",
-    "w": 1920,
-    "h": 1080
-  },
-  "view": {
-    "x": 321,
-    "y": 0,
-    "h": 400,
-    "w": 1599
-  },
-  "annotations": []
-}
-----
-
-* Center +
-
-[annotation,role="data-zoomable"]
-----
-{
-  "image": {
-    "rel": "compose-configuration/page-block-reference/added-navigation-center.png",
-    "alias": "compose-configuration-page-block-reference-added-navigation-center",
-    "w": 1920,
-    "h": 1080
-  },
-  "view": {
-    "x": 321,
-    "y": 0,
-    "h": 400,
-    "w": 1599
-  },
-  "annotations": []
-}
-----
-
-* Right +
-
-[annotation,role="data-zoomable"]
-----
-{
-  "image": {
-    "rel": "compose-configuration/page-block-reference/added-navigation-right.png",
-    "alias": "compose-configuration-page-block-reference-added-navigation-right",
-    "w": 1920,
-    "h": 1080
-  },
-  "view": {
-    "x": 321,
-    "y": 0,
-    "h": 400,
-    "w": 1599
-  },
-  "annotations": []
-}
-----
-
-| [#page-block-navigation-item-type]#<<page-block-navigation-item-type,Navigation item type>>#
-|
-Defines the functionality of a navigation item
-
-.Supported navigation item types:
-* Text: This type displays a navigation item as just test with no extra functionalities.
-* URL: This type of navigation item has a URL option. When clicked, it will redirect to the corresponding URL.
-* Compose page: This type of navigation item has a Compose page option. When clicked, it will redirect to the corresponding Compose page.
-* Dropdown: This type of navigation item has a dropdown option. When clicked, it will display a dropdown with the corresponding dropdown items.
-
-|===
+If you are no longer interested in a tabbed block, you can remove it from the tabs page block by clicking on the *trash icon* button corresponding to it in the tabs page block's configurator.
+// annotate here
