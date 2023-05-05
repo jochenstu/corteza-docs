@@ -747,15 +747,16 @@ Defines the display element from the selected report the page block will use whe
 [#page-block-tabs]
 == Tabs
 
-The *tabs page block* allows you to group different page blocks together and display them as tabs.
+The *tabs* page block allows the grouping of different page blocks together.
 Sometimes a page might contain different blocks and simply laying them out side by side might not be the best way to display them.
 Tabs allow you to have the information you need without cluttering the page, making it easier to navigate a page and being more productive.
 
 === Configuring Tabs
-You can add a *tabs page block* to a page by clicking on the *Add* button and selecting *Tabs* from the list of available page blocks.
-In the *tabs* tab, you can configure the tabs page block in other to add the desired page blocks to it or refine the appearance of the tabs page block itself.
 
-To add a page block to the tabs page block, click on the *+ Add* button and select the desired page block from the list of available page blocks.
+You can add a *tabs* page block to a page by clicking on the *Add* button and selecting *Tabs* from the list of available page blocks.
+In the *tabs* tab of its configurator, you can add your desired page blocks to it or refine the appearance of the tabs page block itself.
+
+To tab a page block, click on the *+ Add* button and select the desired page block from the list of available page blocks, if you added blocks to the page already.
 
 .Tabs page block configuration:
 [annotation,role="data-zoomable"]
@@ -779,8 +780,7 @@ To add a page block to the tabs page block, click on the *+ Add* button and sele
       "x": 410,
       "y": 611,
       "w": 75,
-      "h": 30,
-      "text": "Tabs page block configurator"
+      "h": 30
     },
     {
       "x": 938,
@@ -792,8 +792,8 @@ To add a page block to the tabs page block, click on the *+ Add* button and sele
 }
 ----
 
-You can add a new block to your page for it to be instantly tabbed by using the *+* button next to the dropdown for selecting page blocks.
-// annotate here
+Before tabbing a page block, you will find an input box, this controls the title of the tab. 
+If not set, the title of the page block is used, and if that is unset, a generic name is used which is based on the *kind* of the page block.
 
 .Tabs page block configuration:
 [annotation,role="data-zoomable"]
@@ -801,7 +801,7 @@ You can add a new block to your page for it to be instantly tabbed by using the 
 {
   "image": {
     "rel": "compose-configuration/config-tabs2.png",
-    "alias": "config-tabs-add-block-button",
+    "alias": "config-tabs-title-input-box",
     "w": 1920,
     "h": 1080
   },
@@ -814,21 +814,16 @@ You can add a new block to your page for it to be instantly tabbed by using the 
   },
   "annotations": [
     {
-      "x": 1386,
-      "y": 555,
-      "w": 38,
-      "h": 37
+      "x": 438,
+      "y": 415,
+      "w": 490,
+      "h": 40
     }
   ]
 }
 ----
 
-Tabbing a block removes it from the main page and adds it to the tabs page block.
-You can override this behavior by going to the general tab of that page block and disabling the 'hidden' option for the block.
-This removes it from wherever it is tabbed and returns it to being displayed on the main page.
-// annotate here
-
-A tabbed block is removed from the main page, but you can access its configuration via the *edit* button corresponding to it in the tabs page block's configurator.
+Although a tabbed block is removed from the main page, you can still access its configuration via the *edit* button corresponding to it in the tabs page block's configurator.
 
 .Tabs page block configuration:
 [annotation,role="data-zoomable"]
@@ -858,14 +853,140 @@ A tabbed block is removed from the main page, but you can access its configurati
 }
 ----
 
-Before selecting a page block to be tabbed, you will find an input box, this controls what is going to be displayed as the title of the tab. 
-If not set, the title of the page block is used, and if that is unset, a generic name is used which is based on the *kind* of the block.
-// annotate here
+You can add a new block to your page for it to be instantly tabbed by using the *+* button next to the dropdown for selecting page blocks.
+
+.Tabs page block configuration:
+[annotation,role="data-zoomable"]
+----
+{
+  "image": {
+    "rel": "compose-configuration/config-tabs2.png",
+    "alias": "config-tabs-add-block-button",
+    "w": 1920,
+    "h": 1080
+  },
+  "view": {},
+  "focus": {
+    "x": 410,
+    "y": 50,
+    "w": 1100,
+    "h": 865
+  },
+  "annotations": [
+    {
+      "x": 1386,
+      "y": 555,
+      "w": 38,
+      "h": 37
+    }
+  ]
+}
+----
+
+To discard a tabbed block, you can remove it from the *tabs* page block by clicking on the *trash icon* button corresponding to it in its configurator.
+
+.Tabs page block configuration:
+[annotation,role="data-zoomable"]
+----
+{
+  "image": {
+    "rel": "compose-configuration/config-tabs2.png",
+    "alias": "config-tabs-delete-tab-button",
+    "w": 1920,
+    "h": 1080
+  },
+  "view": {},
+  "focus": {
+    "x": 410,
+    "y": 50,
+    "w": 1100,
+    "h": 865
+  },
+  "annotations": [
+    {
+      "x": 1462,
+      "y": 519,
+      "w": 15,
+      "h": 15
+    }
+  ]
+}
+----
+
+=== Tabs Caveats
+
+Tabbing a block removes it from the main page.
+You can override this behavior by going to the general tab of that page block and disabling the 'hidden' option for the block.
+This removes it from wherever it is tabbed and returns it to being displayed on the main page.
+
+.Generic page block configuration:
+[annotation,role="data-zoomable"]
+----
+{
+  "image": {
+    "rel": "compose-configuration/pageblock-hidden.png",
+    "alias": "config-pageblock-hidden-option",
+    "w": 1920,
+    "h": 1080
+  },
+  "view": {},
+  "focus": {
+    "x": 410,
+    "y": 50,
+    "w": 1100,
+    "h": 865
+  },
+  "annotations": [
+    {
+      "x": 410,
+      "y": 476,
+      "w": 100,
+      "h": 18
+    }
+  ]
+}
+----
 
 [NOTE]
 ====
-When you delete a tab block that holds other page blocks, how many times those blocks occur in other tabs block will be determined and they will be added to the main page or not based on the result of that computation.
+When you delete a tab block that holds other page blocks, how many times those blocks occur in other *tabs* block will be determined and they will be added to the main page or not based on the result of that computation.
 ====
 
-If you are no longer interested in a tabbed block, you can remove it from the tabs page block by clicking on the *trash icon* button corresponding to it in the tabs page block's configurator.
-// annotate here
+=== Example
+
+The most obvious use case for the *tabs* page block is decluttering.
+In the example below you can see how we have several blocks littered on the main page.
+Sometimes, it can get strenuous to navigate the page and find the block you are looking for.
+These are just a few blocks, but imagine if you had a lot more.
+
+.A cluttered page:
+[annotation,role="data-zoomable"]
+----
+{
+  "image": {
+    "rel": "compose-configuration/cluttered-page-tabs.png",
+    "alias": "cluttered-page",
+    "w": 1920,
+    "h": 1080
+  },
+  "view": {}
+}
+----
+
+The image below shows the same page, but with the blocks tabbed.
+Neat right?! Now you can easily navigate the page and find the block you are looking for.
+The page is less punishing on the eyes and you can be more productive.
+
+.A decluttered Page:
+[annotation,role="data-zoomable"]
+----
+{
+  "image": {
+    "rel": "compose-configuration/pageblock-tabs-base.png",
+    "alias": "decluttered-page",
+    "w": 1920,
+    "h": 1080
+  },
+  "view": {}
+}
+----
