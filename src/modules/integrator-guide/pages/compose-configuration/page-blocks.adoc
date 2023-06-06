@@ -747,10 +747,8 @@ Defines the display element from the selected report the page block will use whe
 [#page-block-tabs]
 == Tabs
 
-The *tabs* page block allows the grouping of different page blocks together.
+The *tabs* page block allows the grouping of different page blocks together, decluttering, and making it easier to navigate a page.
 Sometimes a page might contain different blocks and simply laying them out side by side might not be the best way to display them.
-Tabs allow you to have the information you need without cluttering the page, making it easier to navigate a page and being more productive.
-
 === Configuring Tabs
 
 You can add a *tabs* page block to a page by clicking on the *Add* button and selecting *Tabs* from the list of available page blocks.
