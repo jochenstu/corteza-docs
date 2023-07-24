@@ -748,13 +748,12 @@ Defines the display element from the selected report the page block will use whe
 == Tabs
 
 The *tabs* page block allows the grouping of different page blocks together, decluttering, and making it easier to navigate a page.
-Sometimes a page might contain different blocks and simply laying them out side by side might not be the best way to display them.
+
 === Configuring Tabs
 
-You can add a *tabs* page block to a page by clicking on the *Add* button and selecting *Tabs* from the list of available page blocks.
-In the *tabs* tab of its configurator, you can add your desired page blocks to it or refine the appearance of the tabs page block itself.
+You can add a tabs page block to a page by clicking on the btn:[Add] button and selecting Tabs from the list of available page blocks.
 
-To tab a page block, click on the *+ Add* button and select the desired page block from the list of available page blocks, if you added blocks to the page already.
+To tab a page block, select the desired page block from the list of available page blocks.
 
 .Tabs page block configuration:
 [annotation,role="data-zoomable"]
@@ -791,7 +790,7 @@ To tab a page block, click on the *+ Add* button and select the desired page blo
 ----
 
 Before tabbing a page block, you will find an input box, this controls the title of the tab. 
-If not set, the title of the page block is used, and if that is unset, a generic name is used which is based on the *kind* of the page block.
+If not set, the title of the page block is used, and if that is unset, a generic name is used which is based on the kind of the page block.
 
 .Tabs page block configuration:
 [annotation,role="data-zoomable"]
