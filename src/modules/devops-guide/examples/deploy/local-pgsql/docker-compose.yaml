@@ -11,6 +11,7 @@ services:
   db:
     # PostgreSQL Database
     # See https://hub.docker.com/_/postgres for details
+    # Support for postgres 14 and 15 is availalbe in the latest version of Corteza
     image: postgres:13
       #    networks: [ internal ]
     restart: always
